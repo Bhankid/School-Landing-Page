@@ -173,8 +173,122 @@ h4 {
   -webkit-text-stroke: 1px #fff;
 }
 
+h2 {
+  font-size: 2rem;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  text-transform: uppercase;
+  position: relative; 
+  width: 70%;
+  text-align: center;
+}
+
+h2::after {
+  content: ""; 
+  position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  width: 0; 
+  height: 2px; 
+  background-color: #053faa; 
+  animation: move 4s infinite; 
+}
+
+@keyframes move {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.cta {
+  transition: all 0.3s ease-in-out; /* add a transition effect */
+}
+
+.cta.coming-soon {
+  opacity: 0.5; /* reduce opacity to indicate it's coming soon */
+  cursor: not-allowed; /* change cursor to indicate it's not clickable */
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .categories button {
+    margin: 20px;
+    font-size: 1.1rem;
+  }
+
+ .cta-container button i {
+    font-size: 14px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+   .cta-container button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .categories button.cta {
+    flex: 1;
+  }
+
+  .categories .cta-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cta-shs {
+    background-color: #0c53d7;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 6px 8px;
+  cursor: pointer;
+  border-radius: 17px;
+  transition: all 0.3s ease-in-out;
+  }
+
+  .cta-shs:hover {
+    background-color: #053faa;
+  transform: scale(1.2);
+  }
+
+  .cta-tertiary {
+    background-color: #0c53d7;
+  border: none;
+  color: white;
+  padding: 10px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 6px 8px;
+  cursor: pointer;
+  border-radius: 17px;
+  transition: all 0.3s ease-in-out;
+  }
+
+  .cta-tertiary:hover {
+    background-color: #053faa;
+  transform: scale(1.2);
+  }
 
 .main-footer {
+
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.717), 0 4px 8px rgba(0, 0, 0, 0.68);
   background-color: hsla(0, 0%, 5%, 0.502);
   text-align: center;
