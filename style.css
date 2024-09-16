@@ -1,0 +1,286 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.847), rgba(0, 0, 0, 0.564)),
+    url(https://i.postimg.cc/vmwjLYS9/students.png);
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Poppins", "sans-serif";
+  color: #ccc;
+}
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.95em, 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid #0c53d7;
+  z-index: 999;
+}
+
+.logo {
+  margin-right: 60px;
+  padding-left: 20px;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-right: 60px;
+  gap: 30px;
+}
+
+.nav-link {
+  color: #fff4f4;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.5s ease;
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #033591;
+  transition: width 0.8s ease;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: transparent;
+  transition: background-color 0.8s ease;
+}
+
+.nav-link:hover::after {
+  background-color: #0c53d7;
+  margin-top: 10px;
+}
+
+.nav-links li {
+  text-align: center;
+}
+
+.contact-btn {
+  background-color: #0c53d7;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.1rem;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 17px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-btn a {
+  color: white;
+}
+.contact-btn:hover {
+  background-color: #053faa;
+  transform: scale(1.2);
+}
+
+small {
+  font-size: 1.9rem;
+}
+
+h3 {
+  font-size: 4.3rem;
+}
+h3 span {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+
+.main-content {
+  max-width: 800px;
+  padding: 8em 1em;
+  margin-top: 30px;
+}
+
+.info {
+  padding: 1em .5rem;
+  font-size: 1.4rem;
+}
+
+.cta {
+  background-color: #0c53d7;
+  border: none;
+  color: white;
+  padding: 10px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 6px 8px;
+  cursor: pointer;
+  border-radius: 17px;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta:hover {
+  background-color: #053faa;
+  transform: scale(1.2);
+}
+
+h4 {
+  font-size: 2rem;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+
+
+.main-footer {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.717), 0 4px 8px rgba(0, 0, 0, 0.68);
+  background-color: hsla(0, 0%, 5%, 0.502);
+  text-align: center;
+  padding: 1em 0;
+  margin-top: 2em;
+  border-top: 1px solid #0c53d7;
+}
+
+.main-footer p {
+  margin: 0;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 16px;
+    padding: 1em;
+    margin: 0 1em;
+  }
+
+  .nav-bar {
+    padding: 0.5em 1em;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  .mobile-nav {
+  position: relative;
+}
+
+.mobile-nav ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+}
+
+.mobile-nav ul li {
+  margin-bottom: 10px;
+}
+
+.mobile-nav ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.mobile-nav ul li a:hover {
+  color: #337ab7;
+}
+
+#mobile-nav-toggle {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#mobile-nav-toggle.active {
+  transform: rotate(180deg);
+}
+
+  .bxs-chevrons-down {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .logo {
+  width: 120px;
+}
+
+.nav-links {
+  flex: 2;
+  display: none;
+  justify-content: flex-end;
+}
+  .nav-link {
+    padding: 0.5em;
+    margin: 0 0.5em;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  .main-content {
+    padding: 4em 1em;
+  }
+
+  .info {
+    font-size: 1.2rem;
+  }
+
+  .cta {
+    padding: 0.5em 1em;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  .main-footer {
+    padding: 1em 0;
+  }
+}
