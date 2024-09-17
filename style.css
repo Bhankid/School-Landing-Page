@@ -124,27 +124,57 @@ body {
   transform: scale(1.2);
 }
 
-small {
-  font-size: 1.9rem;
+/* .marquee {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  padding: 0;
+} */
+
+.marquee {
+  position: absolute;
+  top: 14%; 
+  left: 0;
+  width: 100%;
+}
+
+.marquee h3 {
+  display: inline-block;
+  position: relative;
+  animation: marquee 10s linear infinite;
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  transform: translateX(100%);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+
 }
 
 h3 {
-  font-size: 4.3rem;
-}
-h3 span {
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px #fff;
+  font-size: 1.8rem;
+  font-weight: 800;
 }
 
 .main-content {
-  max-width: 800px;
-  padding: 8em 1em;
-  margin-top: 30px;
+  max-width: 1950px;
+  padding: 5rem .5rem;
+  margin-top: 20px;
 }
 
 .info {
-  padding: 1em 0.5rem;
-  font-size: 1.4rem;
+  padding: .5rem 0rem;
+  font-size: 1.2rem;
 }
 
 .categories .cta {
@@ -169,13 +199,11 @@ h3 span {
 
 h4 {
   font-size: 2rem;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px #fff;
   text-align: center;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px #fff;
   text-transform: uppercase;
@@ -217,10 +245,8 @@ h2::after {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 40px;
   flex: 1;
-  margin-left: 110px;
-  margin-top: 80px;
+  margin: 40px 0 50px 70px;
 }
 
 .categories h2 {
@@ -229,7 +255,7 @@ h2::after {
 }
 
 .categories button {
-  margin: 28px 15px;
+  margin: 18px 5px 0 10px;
   font-size: 1.2rem;
 }
 
@@ -237,13 +263,13 @@ h2::after {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 20px 50px;
+  padding: 40px 30px;
 }
 
 .message {
-  width: 60%;
-  flex: 2;
-  margin-right: 90px;
+  width: 70%;
+  flex: 3;
+  margin-right: 100px;
 }
 
 
@@ -251,8 +277,8 @@ h2::after {
 .cta-container {
   display: flex;
   flex-direction: row;      
-  gap: 6px;                   
-  padding: 10px 40px;
+  gap: 3px;                   
+  padding: 10px 30px;
 }
 
 .cta-container button i {
@@ -273,6 +299,7 @@ h2::after {
 .categories .cta-container {
   display: flex;
   justify-content: center;
+  align-items: flex-end;
 }
 
 .cta-shs {
@@ -284,7 +311,7 @@ h2::after {
   text-decoration: none;
   display: inline-block;
   font-size: 1.4rem;
-  margin: 6px 10px;
+  margin: 6px 20px;
   cursor: pointer;
   border-radius: 17px;
   transition: all 0.3s ease-in-out;
@@ -367,6 +394,30 @@ h2::after {
     flex-direction: column; 
     padding: 10px 15px; 
   }
+
+  .marquee {
+  position: absolute;
+  top: 15%; 
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee h3 {
+  display: inline-block;
+  position: relative;
+  animation: marquee 10s linear infinite;
+  padding: 0;
+  margin: 0;
+  font-size: 1.3rem;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  transform: translateX(100%);
+}
+
+h3 {
+  font-size: 1.6rem;
+}
 
   .message {
     width: 100%; 
@@ -502,7 +553,7 @@ h2::after {
   }
 
   h4 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   
 
