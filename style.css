@@ -143,11 +143,11 @@ h3 span {
 }
 
 .info {
-  padding: 1em .5rem;
+  padding: 1em 0.5rem;
   font-size: 1.4rem;
 }
 
-.cta {
+.categories .cta {
   background-color: #0c53d7;
   border: none;
   color: white;
@@ -156,7 +156,7 @@ h3 span {
   text-decoration: none;
   display: inline-block;
   font-size: 1.2rem;
-  margin: 6px 8px;
+  margin:20px 8px;
   cursor: pointer;
   border-radius: 17px;
   transition: all 0.3s ease-in-out;
@@ -171,6 +171,7 @@ h4 {
   font-size: 2rem;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px #fff;
+  text-align: center;
 }
 
 h2 {
@@ -178,20 +179,20 @@ h2 {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px #fff;
   text-transform: uppercase;
-  position: relative; 
-  width: 70%;
+  position: relative;
+  width: 80%;
   text-align: center;
 }
 
 h2::after {
-  content: ""; 
-  position: absolute; 
-  bottom: 0; 
-  left: 0; 
-  width: 0; 
-  height: 2px; 
-  background-color: #053faa; 
-  animation: move 4s infinite; 
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #053faa;
+  animation: move 4s infinite;
 }
 
 @keyframes move {
@@ -206,89 +207,115 @@ h2::after {
   }
 }
 
-.cta {
-  transition: all 0.3s ease-in-out; /* add a transition effect */
-}
-
-.cta.coming-soon {
-  opacity: 0.5; /* reduce opacity to indicate it's coming soon */
-  cursor: not-allowed; /* change cursor to indicate it's not clickable */
+.categories .cta {
+  transition: all 0.4s ease-in-out;
+   display: block; 
+  margin: 18px auto;
 }
 
 .categories {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  flex: 1;
+  margin-left: 110px;
+  margin-top: 80px;
+}
 
-  .categories button {
-    margin: 20px;
-    font-size: 1.1rem;
-  }
-
- .cta-container button i {
-    font-size: 14px;
-    margin-left: 8px;
-    vertical-align: middle;
-  }
-
-   .cta-container button {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-
-  .categories button.cta {
-    flex: 1;
-  }
-
-  .categories .cta-container {
-    display: flex;
-    justify-content: center;
-  }
-
-  .cta-shs {
-    background-color: #0c53d7;
-  border: none;
-  color: white;
-  padding: 12px 30px;
-  text-align: center;
-  text-decoration: none;
+.categories h2 {
   display: inline-block;
+  text-align: center;
+}
+
+.categories button {
+  margin: 28px 15px;
   font-size: 1.2rem;
-  margin: 6px 8px;
-  cursor: pointer;
-  border-radius: 17px;
-  transition: all 0.3s ease-in-out;
-  }
+}
 
-  .cta-shs:hover {
-    background-color: #053faa;
-  transform: scale(1.2);
-  }
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 50px;
+}
 
-  .cta-tertiary {
+.message {
+  width: 60%;
+  flex: 2;
+  margin-right: 90px;
+}
+
+
+/* Buttons container styling */
+.cta-container {
+  display: flex;
+  flex-direction: row;      
+  gap: 6px;                   
+  padding: 10px 40px;
+}
+
+.cta-container button i {
+  font-size: 15px;
+  /* margin-left: px; */
+  vertical-align: middle;
+}
+
+.cta-container button {
+  font-size: 17px;
+  padding: 8px 20px;
+}
+
+.categories button.cta {
+  flex: 1;
+}
+
+.categories .cta-container {
+  display: flex;
+  justify-content: center;
+}
+
+.cta-shs {
   background-color: #0c53d7;
   border: none;
   color: white;
-  padding: 14px 32px;
+  padding: 18px 48px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  margin: 6px 10px;
+  cursor: pointer;
+  border-radius: 17px;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-shs:hover {
+  background-color: #053faa;
+  transform: scale(1.2);
+}
+
+.cta-tertiary {
+  background-color: #0c53d7;
+  border: none;
+  color: white;
+  padding: 18px 48px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.4rem;
   margin: 6px 8px;
   cursor: pointer;
   border-radius: 17px;
   transition: all 0.3s ease-in-out;
-  }
+}
 
-  .cta-tertiary:hover {
-    background-color: #053faa;
+.cta-tertiary:hover {
+  background-color: #053faa;
   transform: scale(1.2);
-  }
+}
 
 .main-footer {
-
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.717), 0 4px 8px rgba(0, 0, 0, 0.68);
   background-color: hsla(0, 0%, 5%, 0.502);
   text-align: center;
@@ -302,6 +329,91 @@ h2::after {
 
 .main-footer p {
   margin: 0;
+}
+
+/* .nav-content {
+  display: none;
+   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.nav-content.active {
+  display: block; 
+  position: absolute;
+  top: 50px; 
+  left: -200px;
+   display: flex;
+   flex-direction: column;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  background-color: hsla(0, 0%, 2%, 0.804);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 2;
+  padding: 12px 120px;
+  width: 100%;
+  height: 80vh;
+  list-style: none;
+}
+
+#mobile-nav-toggle {
+  cursor: pointer;
+} */
+
+/* Media query for mobile view (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column; 
+    padding: 10px 15px; 
+  }
+
+  .message {
+    width: 100%; 
+    margin-right: 0;
+  }
+
+  .categories {
+    width: 100%;
+    margin-left: 0; 
+    margin-top: 20px; 
+  }
+
+  .cta-container button {
+  font-size: 12px;
+  padding: 8px 16px;
+  gap: 4px;
+  margin-inline: 4px;
+}
+.nav-content {
+  display: none;
+   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.nav-content.active {
+  display: block; 
+  position: absolute;
+  top: 50px; 
+  left: -200px;
+   display: flex;
+   flex-direction: column;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  background-color: hsla(0, 0%, 2%, 0.804);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 2;
+  padding: 12px 120px;
+  width: 100%;
+  height: 80vh;
+  list-style: none;
+}
+
+#mobile-nav-toggle {
+  cursor: pointer;
+}
 }
 
 
@@ -322,41 +434,37 @@ h2::after {
   }
 
   .mobile-nav {
-  position: relative;
-}
+    position: relative;
+  }
 
-.mobile-nav ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  padding: 10px;
-  width: 100%;
-}
+  .mobile-nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border: 1px solid #053faa;
+    padding: 5px;
+    width: 100%;
+    border-radius: 6px;
+  }
 
-.mobile-nav ul li {
-  margin-bottom: 10px;
-}
+  .mobile-nav ul li {
+    margin-bottom: 4px;
+  }
 
-.mobile-nav ul li a {
-  color: #333;
-  text-decoration: none;
-}
+  .mobile-nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+  }
 
-.mobile-nav ul li a:hover {
-  color: #337ab7;
-}
+  .mobile-nav ul li a:hover {
+    color: #d0d1d4;
+  }
 
-#mobile-nav-toggle {
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-#mobile-nav-toggle.active {
-  transform: rotate(180deg);
-}
+  #mobile-nav-toggle {
+    font-size: 2rem;
+    cursor: pointer;
+  }
 
   .bxs-chevrons-down {
     font-size: 2rem;
@@ -364,14 +472,14 @@ h2::after {
   }
 
   .logo {
-  width: 120px;
-}
+    width: 120px;
+  }
 
-.nav-links {
-  flex: 2;
-  display: none;
-  justify-content: flex-end;
-}
+  .nav-links {
+    flex: 2;
+    display: none;
+    justify-content: flex-end;
+  }
   .nav-link {
     padding: 0.5em;
     margin: 0 0.5em;
@@ -396,16 +504,17 @@ h2::after {
   h4 {
     font-size: 1.5rem;
   }
+  
 
   .main-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 1em 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-top: 1px solid #0c53d7; 
-}
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1em 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid #0c53d7;
+  }
 }
